@@ -1,0 +1,179 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	<title>
+		CakePHP: the rapid development php framework:
+		Items	</title>
+	<link href="http://localhost/cake/favicon.ico" type="image/x-icon" rel="icon" /><link href="http://localhost/cake/favicon.ico" type="image/x-icon" rel="shortcut icon" /><link rel="stylesheet" type="text/css" href="http://localhost/cake/css/review.css" /><link rel="stylesheet" type="text/css" href="http://localhost/cake/css/tagify-style.css" /><script type="text/javascript" src="/cake/js/jquery-1.7.2.min.js"></script><script type="text/javascript" src="/cake/js/jquery-ui-1.8.22.custom.min.js"></script><script type="text/javascript" src="/cake/js/javascript.js"></script><script type="text/javascript" src="/cake/js/jquery.tagify.js"></script></head>
+<body>
+	<div id="container">
+		<div id="header">
+			<h1><a href="http://cakephp.org">CakePHP: the rapid development php framework</a></h1>
+			<span id="welcome">ようこそnorioさん</span>		
+		
+<span id="logout"><a href="http://localhost/cake/items?logout=1">ログアウトする</a></span>
+</div>
+		<div id="content">
+			<div id="flashMessage" class="message">コメントを追加しました。</div>			<div class="items view">
+<h2>Item</h2>
+<!--登録者情報-->
+?<div id="userInfo">
+<table>
+<tr><td>登録者の情報</td></tr>
+<tr><td>登録者 norio</td></tr>
+<tr><td><a href="http://localhost/cake/items/useritem/1">この登録者の商品を見る</a></td></tr>
+<tr><td><a href="http://localhost/cake/comments/index/1">この登録者のコメントを見る</a></td></tr>
+</table>
+</div>
+<dl>
+
+		<dt>登録者</dt>
+		<dd>
+			norio			&nbsp;
+		</dd>		
+
+		<dt>Name</dt>
+		<dd>
+			じょじょｊ			&nbsp;
+		</dd>
+		<dt>Body</dt>
+		<dd>
+			ffefe			&nbsp;
+		</dd>
+
+
+		<dt>Cate</dt>
+		<dd>
+			バッグ			&nbsp;
+		</dd>
+		<dt>Tag</dt>
+		<dd>		<span>GUCCI</span>
+					<span>ARMANI</span>
+					
+			&nbsp;
+		</dd>
+		<dt>Used Time</dt>
+		<dd>
+			1年～3年			&nbsp;
+		</dd>
+		<dt>Score</dt>
+		<dd>
+			1点			&nbsp;
+		</dd>
+		<dt>counter</dt>
+		<dd>
+			3			&nbsp;
+		</dd>
+		<dt>Created</dt>
+		<dd>
+			2012-08-23 09:09:57			&nbsp;
+		</dd>
+	</dl>
+
+<!--採点ボタン-->
+<hr>
+<div id="score">
+<!--すでに投票しているかどうかのフラグ。falseだったら投票できる-->
+<fieldset><legend>みんなの評価</legend></fieldset>
+<h3>投票ありがとうございました！</h3>
+
+<!--投票データ-->	
+<div id="public_vote">
+<table>	
+<p>1点 :
+<img src="http://localhost/cake/img/g.jpg" width="20" height="15" alt="" />1人</p>
+	<p>2点 :
+<img src="http://localhost/cake/img/g.jpg" width="0" height="15" alt="" />0人</p>
+	<p>3点 :
+<img src="http://localhost/cake/img/g.jpg" width="0" height="15" alt="" />0人</p>
+	<p>4点 :
+<img src="http://localhost/cake/img/g.jpg" width="0" height="15" alt="" />0人</p>
+	<p>5点 :
+<img src="http://localhost/cake/img/g.jpg" width="0" height="15" alt="" />0人</p>
+	</table>
+<p>ただいま1人がこの商品を評価しており、
+	平均1.0点です。</p>
+</div>
+
+</div>
+<hr>
+<p id="view_image">
+
+<p>クリックすると拡大されます</p>
+
+<a href=http://localhost/cake/img/pic/_1345680597_001.jpeg  width=150  height=194  class="modal"><img src="http://localhost/cake/img/pic/thumb/_1345680597_001.jpeg" alt="" /></a>
+<!--コメント-->
+<div id="view_comment">
+<form action="/cake/comments/add" id="commentAddForm" method="post" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"/></div><input type="hidden" name="data[comment][user_id]" value="1" id="commentUserId"/><input type="hidden" name="data[comment][item_id]" value="2" id="commentItemId"/><div class="input textarea required"><label for="commentBody">コメント</label><textarea name="data[comment][body]" cols="30" rows="6" id="commentBody"></textarea></div><div class="submit"><input  type="submit" value="コメントする"/></div></form>
+		<p class="com">jiji<br>
+	<a href="http://localhost/cake/items/userinfo/1">norio</a>	<p>			
+</div><!--comment終わり-->
+
+</div><!--item view終わり-->
+
+<!--左サイド-->
+<div class="category">
+	<h3>商品を登録する</h3>
+	<p><a href="http://localhost/cake/items/add">商品を登録する</a></p>
+	
+</div>
+<!--カテゴリ-->
+<div id="category">
+<table>	
+<h3>カテゴリ</h3>
+<tr><td><a href="http://localhost/cake/items/index/0">すべて(2)</a></td></tr>
+<tr><td><a href="http://localhost/cake/items/index/1">バッグ (2)</a></tr></td> 
+	</table>
+<!--タグ-->
+	<h3>タグ</h3>
+<table>
+<tr><td><a href="http://localhost/cake/items?tag=1">CHANNEL (1)</a></td></tr> 
+	<tr><td><a href="http://localhost/cake/items?tag=3">GUCCI (1)</a></td></tr> 
+	<tr><td><a href="http://localhost/cake/items?tag=4">ARMANI (1)</a></td></tr> 
+	</table>
+<!--ログインユーザーの情報-->
+
+</div>
+
+		</div>
+		<div id="footer">
+			<a href="http://www.cakephp.org/" target="_blank"><img src="/cake/img/cake.power.gif" alt="CakePHP: the rapid development php framework" border="0" /></a>		</div>
+	</div>
+	<table class="cake-sql-log" id="cakeSqlLog_13456807955035759b881186_22219100" summary="Cake SQL Log" cellspacing="0"><caption>(default) 29 queries took 82 ms</caption>	<thead>
+		<tr><th>Nr</th><th>Query</th><th>Error</th><th>Affected</th><th>Num. rows</th><th>Took (ms)</th></tr>
+	</thead>
+	<tbody>
+	<tr><td>1</td><td>SELECT `User`.`id` FROM `review_db`.`users` AS `User` LEFT JOIN `review_db`.`items` AS `Item` ON (delete_flg = 0  AND `Item`.`user_id` = `User`.`id`)  WHERE `login_id` = &#039;norio&#039;    LIMIT 1</td><td></td><td style = "text-align: right">1</td><td style = "text-align: right">1</td><td style = "text-align: right">1</td></tr>
+<tr><td>2</td><td>SELECT COUNT(*) AS `count` FROM `review_db`.`items` AS `Item`   WHERE `Item`.`id` = 2</td><td></td><td style = "text-align: right">1</td><td style = "text-align: right">1</td><td style = "text-align: right">1</td></tr>
+<tr><td>3</td><td>SELECT `Item`.`counter` FROM `review_db`.`items` AS `Item`   WHERE `Item`.`id` = 2    LIMIT 1</td><td></td><td style = "text-align: right">1</td><td style = "text-align: right">1</td><td style = "text-align: right">1</td></tr>
+<tr><td>4</td><td>SELECT COUNT(*) AS `count` FROM `review_db`.`items` AS `Item`   WHERE `Item`.`id` = 2</td><td></td><td style = "text-align: right">1</td><td style = "text-align: right">1</td><td style = "text-align: right">1</td></tr>
+<tr><td>5</td><td>SELECT COUNT(*) AS `count` FROM `review_db`.`items` AS `Item`   WHERE `Item`.`id` = 2</td><td></td><td style = "text-align: right">1</td><td style = "text-align: right">1</td><td style = "text-align: right">1</td></tr>
+<tr><td>6</td><td>UPDATE `review_db`.`items` SET `counter` = 3  WHERE `review_db`.`items`.`id` = &#039;2&#039;</td><td></td><td style = "text-align: right">1</td><td style = "text-align: right">1</td><td style = "text-align: right">52</td></tr>
+<tr><td>7</td><td>SELECT `Item`.`id`, `Item`.`user_id`, `Item`.`name`, `Item`.`body`, `Item`.`image`, `Item`.`image2`, `Item`.`image3`, `Item`.`cate_id`, `Item`.`comment_count`, `Item`.`used_time`, `Item`.`score`, `Item`.`counter`, `Item`.`created`, `Item`.`delete_flg`, `Cate`.`cate`, `User`.`id`, `User`.`login_id` FROM `review_db`.`items` AS `Item` LEFT JOIN `review_db`.`cates` AS `Cate` ON (`Item`.`cate_id` = `Cate`.`id`) LEFT JOIN `review_db`.`users` AS `User` ON (`Item`.`user_id` = `User`.`id`)  WHERE `Item`.`id` = 2</td><td></td><td style = "text-align: right">1</td><td style = "text-align: right">1</td><td style = "text-align: right">1</td></tr>
+<tr><td>8</td><td>SELECT `Comment`.`body`, `Comment`.`user_id`, `Comment`.`item_id` FROM `review_db`.`comments` AS `Comment`   WHERE delete_flg = 0 AND `Comment`.`item_id` = (2)   </td><td></td><td style = "text-align: right">1</td><td style = "text-align: right">1</td><td style = "text-align: right">1</td></tr>
+<tr><td>9</td><td>SELECT `User`.`id`, `User`.`login_id` FROM `review_db`.`users` AS `User`   WHERE `User`.`id` = 1   </td><td></td><td style = "text-align: right">1</td><td style = "text-align: right">1</td><td style = "text-align: right">1</td></tr>
+<tr><td>10</td><td>SELECT `Tag`.`tag`, `ItemsTag`.`item_id`, `ItemsTag`.`tag_id` FROM `review_db`.`tags` AS `Tag` JOIN `review_db`.`items_tags` AS `ItemsTag` ON (`ItemsTag`.`item_id` = 2 AND `ItemsTag`.`tag_id` = `Tag`.`id`)    </td><td></td><td style = "text-align: right">2</td><td style = "text-align: right">2</td><td style = "text-align: right">1</td></tr>
+<tr><td>11</td><td>SELECT COUNT(*) AS `count` FROM `review_db`.`votes` AS `Vote`   WHERE `item_id` = 2 AND `vote_point` = 1</td><td></td><td style = "text-align: right">1</td><td style = "text-align: right">1</td><td style = "text-align: right">1</td></tr>
+<tr><td>12</td><td>SELECT COUNT(*) AS `count` FROM `review_db`.`votes` AS `Vote`   WHERE `item_id` = 2 AND `vote_point` = 2</td><td></td><td style = "text-align: right">1</td><td style = "text-align: right">1</td><td style = "text-align: right">1</td></tr>
+<tr><td>13</td><td>SELECT COUNT(*) AS `count` FROM `review_db`.`votes` AS `Vote`   WHERE `item_id` = 2 AND `vote_point` = 3</td><td></td><td style = "text-align: right">1</td><td style = "text-align: right">1</td><td style = "text-align: right">1</td></tr>
+<tr><td>14</td><td>SELECT COUNT(*) AS `count` FROM `review_db`.`votes` AS `Vote`   WHERE `item_id` = 2 AND `vote_point` = 4</td><td></td><td style = "text-align: right">1</td><td style = "text-align: right">1</td><td style = "text-align: right">1</td></tr>
+<tr><td>15</td><td>SELECT COUNT(*) AS `count` FROM `review_db`.`votes` AS `Vote`   WHERE `item_id` = 2 AND `vote_point` = 5</td><td></td><td style = "text-align: right">1</td><td style = "text-align: right">1</td><td style = "text-align: right">1</td></tr>
+<tr><td>16</td><td>SELECT AVG(vote_point) AS voteAVG, COUNT(id) AS cnt FROM `review_db`.`votes` AS `Vote`   WHERE `item_id` = 2    LIMIT 1</td><td></td><td style = "text-align: right">1</td><td style = "text-align: right">1</td><td style = "text-align: right">1</td></tr>
+<tr><td>17</td><td>SELECT COUNT(*) AS `count` FROM `review_db`.`votes` AS `Vote`   WHERE `login_id` = &#039;norio&#039; AND `item_id` = 2</td><td></td><td style = "text-align: right">1</td><td style = "text-align: right">1</td><td style = "text-align: right">2</td></tr>
+<tr><td>18</td><td>SELECT COUNT(*) AS `count` FROM `review_db`.`items` AS `Item`   WHERE 1 = 1</td><td></td><td style = "text-align: right">1</td><td style = "text-align: right">1</td><td style = "text-align: right">1</td></tr>
+<tr><td>19</td><td>SELECT COUNT(cate_id), `Item`.`cate_id`, `Item`.`id` FROM `review_db`.`items` AS `Item` LEFT JOIN `review_db`.`cates` AS `Cate` ON (`Item`.`cate_id` = `Cate`.`id`) LEFT JOIN `review_db`.`users` AS `User` ON (`Item`.`user_id` = `User`.`id`)  WHERE 1 = 1  GROUP BY cate_id</td><td></td><td style = "text-align: right">1</td><td style = "text-align: right">1</td><td style = "text-align: right">2</td></tr>
+<tr><td>20</td><td>SELECT `Cate`.`id`, `Cate`.`cate`, `Cate`.`delete_flg` FROM `review_db`.`cates` AS `Cate`   WHERE `Cate`.`id` = 1   </td><td></td><td style = "text-align: right">1</td><td style = "text-align: right">1</td><td style = "text-align: right">1</td></tr>
+<tr><td>21</td><td>SELECT `Comment`.`id`, `Comment`.`user_id`, `Comment`.`item_id`, `Comment`.`body`, `Comment`.`created`, `Comment`.`delete_flg` FROM `review_db`.`comments` AS `Comment`   WHERE delete_flg = 0 AND `Comment`.`item_id` = (1)   </td><td></td><td style = "text-align: right">1</td><td style = "text-align: right">1</td><td style = "text-align: right">1</td></tr>
+<tr><td>22</td><td>SELECT `User`.`id`, `User`.`login_id`, `User`.`pass`, `User`.`admin_flg` FROM `review_db`.`users` AS `User`   WHERE `User`.`id` = 1   </td><td></td><td style = "text-align: right">1</td><td style = "text-align: right">1</td><td style = "text-align: right">1</td></tr>
+<tr><td>23</td><td>SELECT `Item`.`id`, `Item`.`user_id`, `Item`.`name`, `Item`.`body`, `Item`.`image`, `Item`.`image2`, `Item`.`image3`, `Item`.`cate_id`, `Item`.`comment_count`, `Item`.`used_time`, `Item`.`score`, `Item`.`counter`, `Item`.`created`, `Item`.`delete_flg` FROM `review_db`.`items` AS `Item`   WHERE `Item`.`id` = 1   </td><td></td><td style = "text-align: right">1</td><td style = "text-align: right">1</td><td style = "text-align: right">1</td></tr>
+<tr><td>24</td><td>SELECT `Vote`.`id`, `Vote`.`login_id`, `Vote`.`item_id`, `Vote`.`vote_point` FROM `review_db`.`votes` AS `Vote`   WHERE `Vote`.`item_id` = (1)   </td><td></td><td style = "text-align: right">1</td><td style = "text-align: right">1</td><td style = "text-align: right">1</td></tr>
+<tr><td>25</td><td>SELECT `Tag`.`id`, `Tag`.`tag`, `ItemsTag`.`item_id`, `ItemsTag`.`tag_id` FROM `review_db`.`tags` AS `Tag` JOIN `review_db`.`items_tags` AS `ItemsTag` ON (`ItemsTag`.`item_id` = 1 AND `ItemsTag`.`tag_id` = `Tag`.`id`)    </td><td></td><td style = "text-align: right">1</td><td style = "text-align: right">1</td><td style = "text-align: right">1</td></tr>
+<tr><td>26</td><td>SELECT COUNT(tag_id), `ItemsTag`.`tag_id` FROM `review_db`.`items_tags` AS `ItemsTag`   WHERE 1 = 1  GROUP BY tag_id</td><td></td><td style = "text-align: right">3</td><td style = "text-align: right">3</td><td style = "text-align: right">1</td></tr>
+<tr><td>27</td><td>SELECT `Tag`.`id`, `Tag`.`tag` FROM `review_db`.`tags` AS `Tag`   WHERE `id` = 1</td><td></td><td style = "text-align: right">1</td><td style = "text-align: right">1</td><td style = "text-align: right">1</td></tr>
+<tr><td>28</td><td>SELECT `Tag`.`id`, `Tag`.`tag` FROM `review_db`.`tags` AS `Tag`   WHERE `id` = 3</td><td></td><td style = "text-align: right">1</td><td style = "text-align: right">1</td><td style = "text-align: right">1</td></tr>
+<tr><td>29</td><td>SELECT `Tag`.`id`, `Tag`.`tag` FROM `review_db`.`tags` AS `Tag`   WHERE `id` = 4</td><td></td><td style = "text-align: right">1</td><td style = "text-align: right">1</td><td style = "text-align: right">1</td></tr>
+	</tbody></table>
+	</body>
+</html>
+

@@ -1,0 +1,86 @@
+<div class="items index">
+<h2><?php echo __('Items');?></h2>
+<div id="research">
+<?php 
+	echo $this->Form->create('Items',array('action'=>'index','type'=>'get'));
+	echo $this->Form->input('sortKey',array('label'=>'並び変えをする','options'=>array('新しい順','評価の高い順','コメントの多い順','参照数の多い順'),'selected'=>array('value'=>$sortKey))); 
+	echo $this->Form->end();
+?>
+<div id="wordBox">
+<?php
+	 //echo $this->Form->create('Items',array('action'=>'index','type'=>'get'));
+	//echo $this->Form->input('word',array('type'=>'text','label'=>'検索'));
+	 //echo $this->Form->end("検索する");
+
+?>
+</div>
+</div>
+<div id="kensaku">
+<?php
+	if(isset($word)===true){ 
+	echo $this->Paginator->counter(array(
+	'format' => __("{$word}で検索中。<br>{:count}件の商品が見つかりました。 ")
+));
+	}	
+	 /*echo $this->Paginator->counter(array(
+	'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+));*/
+	?>	</div>
+	
+<table cellpadding="0" cellspacing="0">
+	<tr>
+			<th>商品名</th>
+	    <th width=100px>商品画像</th>
+			<th>カテゴリ</th>
+			<th>タグ</th>
+			<th>評価</th>
+			<th>参照数</th>
+			<th>コメント数</th>
+			<th>登録日</th>
+	</tr>
+
+<?php
+foreach ($items as $item): ?>
+	<tr>
+		<td><?php echo $this->Html->link($item['Item']['name'],array('action' => 'view', $item['Item']['id'])); ?>&nbsp;</td>
+		<td><?php echo $this->Html->image(IMG_LOAD_PATH_THUMB.$item['Item']['image'],array('url'=>"/items/view/".$item['Item']['id']));?></td>
+		<td><?php echo h($item['Cate']['cate']); ?>
+		</td>
+		<td><?php foreach($item['Tag'] as $tag):?>
+		<span><?php echo $tag['tag'] ?></span>
+			<?php endforeach;?>		
+			&nbsp;
+		</td>
+		<td>
+<?php 
+	//ユーザー評価
+	if(count($item['Vote']) >0 ){
+		$voteScore=0;
+		foreach($item['Vote'] as $vote){
+			$voteScore += $vote["vote_point"];
+		}
+		echo $voteScore/count($item['Vote'])."点";
+	}else{
+		echo "評価なし";
+	}
+
+?>
+&nbsp;</td>
+		<td><?php echo h($item['Item']['counter']); ?>&nbsp;</td>
+		<td><?php echo $item['Item']['comment_count'] ; ?>&nbsp;</td>
+		<td><?php echo h($item['Item']['created']); ?>&nbsp;</td>
+	</tr>
+<?php endforeach; ?>
+	</table>
+
+		
+	<div class="paging">
+	<?php
+	
+		echo $this->Paginator->prev('< ' . __('前へ'), array(), null, array('class' => 'prev disabled'));
+		echo $this->Paginator->numbers(array('separator' => ''));
+		echo $this->Paginator->next(__('次へ') . ' >', array(), null, array('class' => 'next disabled'));
+	?>
+	</div>
+</div>
+<?php echo $this->element('left'); ?>

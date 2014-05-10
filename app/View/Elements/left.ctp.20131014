@@ -1,0 +1,67 @@
+﻿<!--sidebar-->
+<div id="sidebar">
+    
+    <!--login_form-->
+    <div id="login_form">
+        <p id="hello_message">ようこそ<?php echo $yourname; ?>さん</p>
+        <?php if($login_id === "ゲスト"):?>
+        <ul>
+            <?php echo $this->Form->create("User" , array( 'controller' => 'user' , 'action' => 'index' ) ); ?>
+            <?php echo $this->Form->input("login_id",array('type'=>'text','label'=>'メールアドレス','size'=>'20'));
+            echo $this->Form->input("pass",array('type'=>'password','label'=>'パスワード','size'=>'20'));
+            echo $this->Form->input("iscookie",array('type'=>'checkbox','label'=>'ログインしたままにする'));
+            echo $this->Form->end("ログインする")
+            ?>
+            <p id="regist"><?php echo $this->Html->link(__('新規登録をする'), array( 'controller'=>'users' , 'action' => 'regist')); ?></p>
+        </ul>
+        <?php else:?>
+        <p><?php echo $this->Html->link("ログアウトする",array('controller'=>'items','action'=>'index','?'=>array("logout"=>1))); ?>
+        </p>
+        <?php endif ;?>
+    </div>
+    <!--login_form end-->
+    
+    <!--item_regist-->
+    <div id="item_regist">
+        <h3><?php echo __('商品を登録する'); ?></h3>
+        <p><?php echo $this->Html->link(__('商品を登録する'), array('controller'=>'items','action' => 'add')); ?></p>
+    </div>
+    <!--item_regist end -->
+    
+    <!--category_list-->
+    <div id="category_list">
+        <h3><?php echo __('カテゴリ'); ?></h3>
+        <table>	
+            <tr>
+                <td>
+                <?php echo $this->Html->link("すべて({$item_count})",array('controller'=>'items','action'=>'index',0));?>
+                </td>
+            </tr>
+            <?php foreach($catelinks as $key=> $catelink): ?>
+            <tr>
+                <td>
+                <?php echo $this->Html->link($catelink['Cate']['cate']." "."({$catelink[0]["COUNT(cate_id)"]})" , array('controller'=>'items','action' => 'index',$catelink['Item']['cate_id'])); ?>
+                </td>
+            </tr>
+            <?php endforeach;?>
+        </table>
+    <!--category_list end-->
+    </div>   
+
+    <!--tag_list-->
+    <div id="tag_list">        
+        <h3><?php echo __('タグ'); ?></h3>
+        <table>
+            <?php foreach($tags as $tag): ?>
+            <tr>
+                <td>
+                <?php echo $this->Html->link($tag['Tag']['tag']." ({$tag[0]['tag_count']})",array('controller'=>'items','action'=>'index','?'=>array('tag'=>$tag['Tag']['id']))); ?>
+                </td>
+            </tr> 
+            <?php  endforeach;?>
+        </table>
+    </div>
+    <!--tag_list end -->
+
+</div>
+<!--sidebar end-->

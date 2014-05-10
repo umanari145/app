@@ -1,0 +1,372 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2013-09-12 12:55+0900\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Controller/CatesController.php:30;61;87
+msgid "Invalid cate"
+msgstr ""
+
+#: Controller/CatesController.php:44;65
+msgid "The cate has been saved"
+msgstr ""
+
+#: Controller/CatesController.php:47;68
+msgid "The cate could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/CatesController.php:90
+msgid "Cate deleted"
+msgstr ""
+
+#: Controller/CatesController.php:93
+msgid "Cate was not deleted"
+msgstr ""
+
+#: Controller/CommentsController.php:49;84;112
+msgid "Invalid comment"
+msgstr ""
+
+#: Controller/CommentsController.php:67
+msgid "コメントを追加しました。"
+msgstr ""
+
+#: Controller/CommentsController.php:69
+msgid "コメントが追加できませんでした。"
+msgstr ""
+
+#: Controller/CommentsController.php:88
+msgid "The comment has been saved"
+msgstr ""
+
+#: Controller/CommentsController.php:91
+msgid "The comment could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/CommentsController.php:115
+msgid "Comment deleted"
+msgstr ""
+
+#: Controller/CommentsController.php:118
+msgid "Comment was not deleted"
+msgstr ""
+
+#: Controller/ItemsController.php:99;156;184
+msgid "データが存在しません。"
+msgstr ""
+
+#: Controller/ItemsController.php:133
+msgid "データの保存ができました"
+msgstr ""
+
+#: Controller/ItemsController.php:137
+msgid "データの保存に失敗しました。もう一度入力してください。"
+msgstr ""
+
+#: Controller/ItemsController.php:160
+msgid "The item has been saved"
+msgstr ""
+
+#: Controller/ItemsController.php:163
+msgid "The item could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/ItemsController.php:188
+msgid "データを削除しました。"
+msgstr ""
+
+#: Controller/ItemsController.php:191
+msgid "データの削除に失敗しました。"
+msgstr ""
+
+#: Controller/UserinfosController.php:38;73;103
+msgid "Invalid userinfo"
+msgstr ""
+
+#: Controller/UserinfosController.php:53;77
+msgid "The userinfo has been saved"
+msgstr ""
+
+#: Controller/UserinfosController.php:56;80
+msgid "The userinfo could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/UserinfosController.php:106
+msgid "Userinfo deleted"
+msgstr ""
+
+#: Controller/UserinfosController.php:109
+msgid "Userinfo was not deleted"
+msgstr ""
+
+#: Controller/VotesController.php:32;64;92
+msgid "Invalid Vote"
+msgstr ""
+
+#: Controller/VotesController.php:68
+msgid "The Vote has been saved"
+msgstr ""
+
+#: Controller/VotesController.php:71
+msgid "The Vote could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/VotesController.php:95
+msgid "Vote deleted"
+msgstr ""
+
+#: Controller/VotesController.php:98
+msgid "Vote was not deleted"
+msgstr ""
+
+#: View/Comments/index.ctp:2
+#: View/Items/useritem.ctp:2
+#: View/Items/view.ctp:2
+msgid "Item"
+msgstr ""
+
+#: View/Comments/index.ctp:24
+#: View/Items/index.ctp:66
+#: View/Items/useritem.ctp:40
+msgid "前へ"
+msgstr ""
+
+#: View/Comments/index.ctp:26
+#: View/Items/index.ctp:68
+#: View/Items/useritem.ctp:42
+msgid "次へ"
+msgstr ""
+
+#: View/Elements/left.ctp:16;17
+msgid "商品を登録する"
+msgstr ""
+
+#: View/Elements/left.ctp:22
+msgid "カテゴリ"
+msgstr ""
+
+#: View/Elements/left.ctp:38
+msgid "タグ"
+msgstr ""
+
+#: View/Items/add.ctp:4
+msgid "商品投稿ページ"
+msgstr ""
+
+#: View/Items/edit.ctp:4
+msgid "Edit Item"
+msgstr ""
+
+#: View/Items/edit.ctp:17
+#: View/Userinfos/add.ctp:12
+#: View/Userinfos/edit.ctp:13
+msgid "Submit"
+msgstr ""
+
+#: View/Items/edit.ctp:20
+#: View/Userinfos/add.ctp:15
+#: View/Userinfos/edit.ctp:16
+#: View/Userinfos/index.ctp:10;46
+#: View/Userinfos/view.ctp:32
+msgid "Actions"
+msgstr ""
+
+#: View/Items/edit.ctp:23
+#: View/Userinfos/edit.ctp:19
+#: View/Userinfos/index.ctp:25
+msgid "Delete"
+msgstr ""
+
+#: View/Items/edit.ctp:23
+#: View/Userinfos/edit.ctp:19
+#: View/Userinfos/index.ctp:25
+#: View/Userinfos/view.ctp:35
+msgid "Are you sure you want to delete # %s?"
+msgstr ""
+
+#: View/Items/edit.ctp:24
+msgid "List Items"
+msgstr ""
+
+#: View/Items/edit.ctp:25
+msgid "List Cates"
+msgstr ""
+
+#: View/Items/edit.ctp:26
+msgid "New Cate"
+msgstr ""
+
+#: View/Items/edit.ctp:27
+msgid "List comments"
+msgstr ""
+
+#: View/Items/edit.ctp:28
+msgid "New comment"
+msgstr ""
+
+#: View/Items/index.ctp:2
+msgid "Items"
+msgstr ""
+
+#: View/Items/view.ctp:8
+msgid "登録者"
+msgstr ""
+
+#: View/Items/view.ctp:14
+msgid "Name"
+msgstr ""
+
+#: View/Items/view.ctp:19
+msgid "Body"
+msgstr ""
+
+#: View/Items/view.ctp:24
+msgid "Cate"
+msgstr ""
+
+#: View/Items/view.ctp:29
+msgid "Tag"
+msgstr ""
+
+#: View/Items/view.ctp:36
+msgid "counter"
+msgstr ""
+
+#: View/Items/view.ctp:41
+msgid "Created"
+msgstr ""
+
+#: View/Userinfos/add.ctp:4
+msgid "Add Userinfo"
+msgstr ""
+
+#: View/Userinfos/add.ctp:18
+#: View/Userinfos/edit.ctp:20
+#: View/Userinfos/view.ctp:36
+msgid "List Userinfos"
+msgstr ""
+
+#: View/Userinfos/add.ctp:19
+#: View/Userinfos/edit.ctp:21
+#: View/Userinfos/index.ctp:49
+#: View/Userinfos/view.ctp:38
+msgid "List Users"
+msgstr ""
+
+#: View/Userinfos/add.ctp:20
+#: View/Userinfos/edit.ctp:22
+#: View/Userinfos/index.ctp:50
+#: View/Userinfos/view.ctp:39
+msgid "New User"
+msgstr ""
+
+#: View/Userinfos/edit.ctp:4
+#: View/Userinfos/view.ctp:34
+msgid "Edit Userinfo"
+msgstr ""
+
+#: View/Userinfos/index.ctp:2
+msgid "Userinfos"
+msgstr ""
+
+#: View/Userinfos/index.ctp:23
+msgid "View"
+msgstr ""
+
+#: View/Userinfos/index.ctp:24
+msgid "Edit"
+msgstr ""
+
+#: View/Userinfos/index.ctp:33
+msgid "Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}"
+msgstr ""
+
+#: View/Userinfos/index.ctp:39
+msgid "previous"
+msgstr ""
+
+#: View/Userinfos/index.ctp:41
+msgid "next"
+msgstr ""
+
+#: View/Userinfos/index.ctp:48
+#: View/Userinfos/view.ctp:37
+msgid "New Userinfo"
+msgstr ""
+
+#: View/Userinfos/view.ctp:2
+msgid "Userinfo"
+msgstr ""
+
+#: View/Userinfos/view.ctp:4
+msgid "Id"
+msgstr ""
+
+#: View/Userinfos/view.ctp:9
+msgid "User"
+msgstr ""
+
+#: View/Userinfos/view.ctp:14
+msgid "Username"
+msgstr ""
+
+#: View/Userinfos/view.ctp:19
+msgid "Userimage"
+msgstr ""
+
+#: View/Userinfos/view.ctp:24
+msgid "Contents"
+msgstr ""
+
+#: View/Userinfos/view.ctp:35
+msgid "Delete Userinfo"
+msgstr ""
+
+#: View/Users/index.ctp:22
+msgid "新規登録をする"
+msgstr ""
+
+#: Model/Cate.php:validation for field id;validation for field cate
+#: Model/Userinfo.php:validation for field username;validation for field contents
+msgid "notempty"
+msgstr ""
+
+#: Model/Comment.php:validation for field body
+msgid "コメントを入れてください。"
+msgstr ""
+
+#: Model/Item.php:validation for field name
+msgid "商品名を入れてください"
+msgstr ""
+
+#: Model/Item.php:validation for field body
+msgid "記事内容を入力してください"
+msgstr ""
+
+#: Model/Item.php:validation for field image
+msgid "画像ファイルをアップロードしてください。※有効なファイル形式はjpeg,jpg,gif,pngのみです。またサイズは1MB以内です。"
+msgstr ""
+
+#: Model/Item.php:validation for field image2;validation for field image3
+msgid "※有効なファイル形式はjpeg,jpg,gif,pngのみです。またサイズは1MB以内です。"
+msgstr ""
+
+#: Model/User.php:validation for field login_id
+msgid "メールアドレスが未入力です"
+msgstr ""
+
+#: Model/User.php:validation for field pass
+msgid "パスワードが未入力です"
+msgstr ""
+
