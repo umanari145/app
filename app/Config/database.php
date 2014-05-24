@@ -7,7 +7,7 @@ class DATABASE_CONFIG {
 		'host' => 'localhost',
 		'login' => 'root',
 		'password' => '',
-		'database' => 'review_db',
+		'database' => 'sample_shopping_db',
 		'encoding' => 'utf8'
 	);
 }

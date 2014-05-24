@@ -1,0 +1,28 @@
+cake/
+| app/ //当面はこの中だけしかいじらない
+| | Config/ 設定情報など
+| | Console/ 
+| | Controller/ コントローラー (基本的にModelを呼び出してViewにデータを渡す)
+| | Lib/
+| | Locale/
+| | Model/　モデル
+| | Plugin/
+| | Test/
+| | Vendor/
+| | View/
+| | tmp/
+| | webroot/ 画像ファイルや
+| | .htaccess
+| | index.php
+| | sample.html
+| | seminar_db.sql
+| | substitution.sh
+| lib/
+| plugins/
+| vendors/
+ .htaccess
+| README.md
+| build.properties
+| build.xml
+| composer.json
+| index.php

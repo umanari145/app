@@ -24,9 +24,6 @@ class CommentsController extends AppController {
  *
  * @return void
  */
-    public function beforeFilter (){
-        parent::beforeFilter();
-    }
     
     public function index( $id = null ) {
 
@@ -60,8 +57,7 @@ class CommentsController extends AppController {
     public function add($id = null){
 
         $id = $this->request->data['comment']['item_id'];
-      $this->Comment->create();
-        
+        $this->Comment->create();
         if($this->Comment->save( $this->request->data['comment'] )){
             $this->Session->setFlash(__('コメントを追加しました。'));
         }else{

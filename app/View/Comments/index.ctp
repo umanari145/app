@@ -1,9 +1,9 @@
 <div class="items view">
     <h2><?php  echo __('Item');?></h2>
-    <?php	echo $userinfo['User']['yourname']."さんが書いたコメント<br>"; ?>
+    <?php	echo $userinfo['User']['username']."さんが書いたコメント<br>"; ?>
     <?php
     	echo $this->Paginator->counter(array(
-    		'format' => __("{$userinfo['User']['yourname']}さんのコメント数:{:count}件 "),
+    		'format' => __("{$userinfo['User']['username']}さんのコメント数:{:count}件 "),
     		'model'=>'Comment'
     ));
     ?>

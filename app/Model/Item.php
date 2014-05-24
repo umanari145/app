@@ -22,32 +22,20 @@ class Item extends AppModel {
     public $validate = array(
         'name' => array(
             'notempty' => array(
-            'rule'     => array('notempty'),
-            'message'  => '商品名を入れてください',
-                //'allowEmpty' => false,
-                //'required' => false,
-                //'last' => false, // Stop validation after this rule
-                //'on' => 'create', // Limit validation to 'create' or 'update' operations
+                'rule'     => array('notempty'),
+                'message'  => '商品名を入れてください'
             ),
         ),
         'body' => array(
             'notempty' => array(
                 'rule' => array('notempty'),
-                'message' => '記事内容を入力してください',
-                //'allowEmpty' => false,
-                //'required' => false,
-                //'last' => false, // Stop validation after this rule
-                //'on' => 'create', // Limit validation to 'create' or 'update' operations
+                'message' => '記事内容を入力してください'
             ),
         ),
         'image' => array(
             'imageCheck' => array(
                 'rule' => array('imageCheck','image'),
-                'message' => '画像ファイルをアップロードしてください。※有効なファイル形式はjpeg,jpg,gif,pngのみです。またサイズは1MB以内です。',
-                //'allowEmpty' => false,
-                //'required' => false,
-                //'last' => false, // Stop validation after this rule
-                //'on' => 'create', // Limit validation to 'create' or 'update' operations
+                'message' => '画像ファイルをアップロードしてください。※有効なファイル形式はjpeg,jpg,gif,pngのみです。またサイズは1MB以内です。'
             ),
         ),
         'image2' => array(
@@ -55,9 +43,6 @@ class Item extends AppModel {
                 'rule' => array('imageCheck','image2'),
                 'message' => '※有効なファイル形式はjpeg,jpg,gif,pngのみです。またサイズは1MB以内です。',
                 'allowEmpty' => true
-                //'required' => false,
-                //'last' => false, // Stop validation after this rule
-                //'on' => 'create', // Limit validation to 'create' or 'update' operations
             ),
         ),
         'image3' => array(
@@ -65,42 +50,14 @@ class Item extends AppModel {
                 'rule' => array('imageCheck','image3'),
                 'message' => '※有効なファイル形式はjpeg,jpg,gif,pngのみです。またサイズは1MB以内です。',
                 'allowEmpty' => true
-                //'required' => false,
-                //'last' => false, // Stop validation after this rule
-                //'on' => 'create', // Limit validation to 'create' or 'update' operations
             ),
         ),
         'cate_id' => array(
             'notempty' => array(
                 'rule' => array('notempty'),
                 'message' => '',
-                //'allowEmpty' => false,
-                //'required' => false,
-                //'last' => false, // Stop validation after this rule
-                //'on' => 'create', // Limit validation to 'create' or 'update' operations
             ),
         )
-/*        'used_time' => array(
-            'notempty' => array(
-                'rule' => array('notempty'),
-                'message' => '',
-                //'allowEmpty' => false,
-                //'required' => false,
-                //'last' => false, // Stop validation after this rule
-                //'on' => 'create', // Limit validation to 'create' or 'update' operations
-            ),
-        ),
- /*       'score' => array(
-            'notempty' => array(
-                'rule' => array('notempty'),
-                'message' => '',
-                //'allowEmpty' => false,
-                //'required' => false,
-                //'last' => false, // Stop validation after this rule
-                //'on' => 'create', // Limit validation to 'create' or 'update' operations
-            ),
-        )
-*/
     );
 
     //画像ファイルチェック関数
@@ -112,26 +69,26 @@ class Item extends AppModel {
         //もし一枚目でファイルがない場合はエラー
         if($key==="image" && $image["name"] === "" ) return false; 
 
-            if($image["name"] !== ""){
+        if($image["name"] !== ""){
 
-                if($image['error'] === 0 && $image['size'] !== 0 && preg_match ( '/^image.*/', $image['type'] ) === 1){     
-		    
-		    if(is_uploaded_file($image['tmp_name']) && $image['size'] < 1000000){
+            if($image['error'] === 0 && $image['size'] !== 0 && preg_match ( '/^image.*/', $image['type'] ) === 1){     
 
-                        $ext = array();
-                        $ext = explode( '/', $image['type']);
-                        if ( $ext[1] !== 'jpg' && $ext[1] !== 'gif' && $ext[1] !== 'jpeg' && $ext[1] !== 'png' ) {
-                            return false;
-                        }
-                        //アップされた画像がすべての条件をクリアしていたらここに来る
-                        return true;
+                if(is_uploaded_file($image['tmp_name']) && $image['size'] < 1000000){
+
+                    $ext = array();
+                    $ext = explode( '/', $image['type']);
+                    if ( $ext[1] !== 'jpg' && $ext[1] !== 'gif' && $ext[1] !== 'jpeg' && $ext[1] !== 'png' ) {
+                        return false;
                     }
-                    return false;
+                    //アップされた画像がすべての条件をクリアしていたらここに来る
+                    return true;
                 }
                 return false;
             }
-            //２枚目、３枚目の画像はなくてもOKなのでここに来る
-            return true;
+            return false;
+        }
+        //２枚目、３枚目の画像はなくてもOKなのでここに来る
+        return true;
     }
 
     //画像ファイルはアップする前に名前を変え、
@@ -169,6 +126,7 @@ class Item extends AppModel {
                     $imgcreate->load( IMG_PATH . $imageName );
                     $imgcreate->resize( 200 , 200 );
                     $imgcreate->save( IMG_PATH_THUMB . $imageName );
+
                 }else{
                     //２枚目、３枚目でファイルがないときはここ
                     $this->data["Item"][$val] = null;
@@ -183,43 +141,51 @@ class Item extends AppModel {
     } 
 
     //itemデータ一覧
-    //conatainableでほしいデータだけ取り出す。
     //階層を2段以上掘るときの処理に注意！
     public function itemData($id){
 
         $item = $this->find('all',
-                             array(
-                                    'contain' => array('Comment'=> array( 'fields' => array('body'),
-                                                                        'User'   => array('fields' => array( 'id' , 'login_id' ))
-                                                                       ),
-                                                       'User'   => array( 'fields' => array( 'id' , 'login_id','yourname' )),
-                                                       'Tag.tag',
-                                                       'Cate.cate',
-                                                       ),
+            array(
+                'contain' => array(
+                    'Comment'=> array( 'fields' => array('body'), 'User' => array('fields' => array( 'id' ,'username'))),
+                    'User'   => array( 'fields' => array( 'id' ,'username' )),
+                    'Cate.cate'),
+                'conditions' => array( 'Item.id' => $id ) )
 
-                                    'conditions' => array( 'Item.id' => $id )
-                                  )
-                           );
+            );
 
         return $item[0];
 
     }
 
-    //カウンターの増加
-    public function addCount($id){
-        //カウンター　他のデータはいらないので-1
-        $this->recursive=-1;
-        $data=$this->find('first',array('contain'=>null,'conditions'=>array('Item.id'=>$id),'fields'=>array('counter')));
-        $counter=$data["Item"]["counter"];
-        $counter++;
-        $this->saveField('counter',$counter);
+    public function getSearchQuery()
+    {
+        //検索窓に文字があった場合
+        if( isset( $this->request->query['word'] ) === true && trim( $this->request->query['word'] ) !== "" )
+        {    
+            
+            $word = $this->request->query['word'];
+            $this->paginate['conditions'] = array( 'or' => array(
+                                                                  array('Item.body Like' => "%" . $word . "%" ),
+                                                                  array('Item.name Like' => "%" . $word. "%" )
+                                                                )
+                                                  );
+            $this->set( 'word' , $word );
+        }
+
+        //カテゴリ検索あった場合はここで絞り込み
+        //ただしインデックスは０表記
+        if( $key !== null && $key !== "0" ) $this->paginate['conditions'] = array( 
+                                                                                   'Item.delete_flg' => 0 , 
+                                                                                   'Item.cate_id'    => $key
+                                                                                  );
     
     }
 
     //左サイドの
     //カテゴリリスト
     public function cateList(){
-    
+
         $this->recursive=2;
         //取り出したい情報はitemごとのカテゴリーの数と名称
         //名称を取り出すためにidでリンク付けをする
@@ -255,38 +221,7 @@ class Item extends AppModel {
             'className' => 'Comment',
             'foreignKey' => 'item_id',
             'dependent' => false,
-            'conditions' => 'delete_flg = 0',
-            'fields' => '',
-            'order' => '',
-            'limit' => '',
-            'offset' => '',
-            'exclusive' => '',
-            'finderQuery' => '',
-            'counterQuery' => ''
-        ),
-        'Vote' => array(
-            'className' => 'Vote',
-            'foreignKey' => 'item_id',
-            'dependent' => false,
-            'conditions' => '',
-            'fields' => '',
-            'order' => '',
-            'limit' => '',
-            'offset' => '',
-            'exclusive' => '',
-            'finderQuery' => '',
-            'counterQuery' => ''
-        )
-    );
-
-    public $hasAndBelongsToMany = array(
-        'Tag' => array(
-            'className' => 'Tag',
-            'joinTable' => 'items_tags',
-            'foreignKey' => 'item_id',
-            'associationForeignKey' => 'tag_id',
-            //これいれないとappcontrollerでitemstagのメソッドが使えない
-            'with'   =>'ItemsTag'
+            'conditions' => 'delete_flg = 0'
         )
     );
 

@@ -180,9 +180,10 @@ CakeLog::config('error', array(
 	'file' => 'error',
 ));
 //íËêîê›íË
-define( 'URL' , "http://dev.cutedogphotosite.net/") ;
-define( 'ROOT_DIRECTORY' , '/var/www/html/' );
-define('IMG_PATH', ROOT_DIRECTORY . 'app/webroot/img/pic/_');
-define('IMG_PATH_THUMB', ROOT_DIRECTORY . 'app/webroot/img/pic/thumb/_');
-define('IMG_LOAD_PATH' ,  URL .'img/pic/_' );
-define('IMG_LOAD_PATH_THUMB' ,  URL . 'img/pic/thumb/_');
+define( 'URL' , "http://localhost/cake/") ;
+define( 'ROOT_DIRECTORY' , 'C:\\xampp\\htdocs\\cake\\' );
+define( 'IMG_PATH', ROOT_DIRECTORY . 'app/webroot/img/pic/_');
+define( 'IMG_PATH_THUMB', ROOT_DIRECTORY . 'app/webroot/img/pic/thumb/_');
+define( 'PROJECT_DIR' , 'app/');
+define( 'IMG_LOAD_PATH' ,  URL . PROJECT_DIR . 'img/pic/_' );
+define( 'IMG_LOAD_PATH_THUMB' ,  URL . PROJECT_DIR . 'img/pic/thumb/_');

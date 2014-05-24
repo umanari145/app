@@ -30,7 +30,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		echo $this->Html->meta('icon');
 		echo $this->Html->css('review');
 		echo $this->Html->script('jquery-1.7.2.min.js'); 
-		//echo $this->Html->script('jquery-ui-1.8.22.custom.min.js'); 
+		echo $this->Html->script('config.js'); 
 		echo $this->Html->script('javascript.js'); 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -43,14 +43,8 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
         <div id="container">
 
 	    	<div id="header">
-	    		<h1>ワンちゃんのサイトです。</h1>
-                <ul>
-                    <li>メニュー1</li>
-                    <li>メニュー2</li>
-                    <li>メニュー3</li>
-                    <li>メニュー4</li>
-                </ul>
-	    	</div>
+	    		<h1>サンプルEC</h1>
+            </div>
             <!--header end-->
 
 	    	<div id="content">

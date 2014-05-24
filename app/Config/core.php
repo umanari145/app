@@ -172,31 +172,23 @@
  * the cake shell command: cake schema create Sessions
  *
  */
+ 
 	Configure::write('Session', array(
-	'defaults' => 'php' ,
-	'timeout'=>'100000' ,
-	  'ini' => Array(
-        'session.cookie_lifetime' => 0, //ブラウザを閉じた時にセッションを破棄
-        'session.gc_maxlifetime' => 2580000,
-        'session.gc_probability' => 1,
-        'session.gc_divisor' => 100
-	)));
-
-
-/**
- * The level of CakePHP security.
- */
-	Configure::write('Security.level', 'medium');
+		'defaults' => 'php'
+	));
 
 /**
  * A random string used in security hashing methods.
  */
-	Configure::write('Security.salt', 'jojoYhG93b0qyJfIxfs2guVoUubWwvniR2G0FgaC9mi');
+	Configure::write('Security.salt', 'DYhG93b0qyJfIxffjaosdfhaofhaupghwighewiofhas2guVoUubWwvniR2G0FgaC9mi');
 
 /**
  * A random numeric string (digits only) used to encrypt/decrypt strings.
  */
-	Configure::write('Security.cipherSeed', 'jojojojo59309657453542496749683645');
+	Configure::write('Security.cipherSeed', '76859fajsdiopfadjsopfhasipfhadsipfhasifdshai309657453542496749683645');
+
+
+
 
 /**
  * Apply timestamps with the last modified time to static assets (js, css, images).

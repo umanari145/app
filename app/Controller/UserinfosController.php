@@ -24,17 +24,6 @@ class UserinfosController extends AppController {
 		$this->Userinfo->recursive = 0;
 		$this->set('userinfos', $this->paginate());
 	}
-/*
-	public function personal( $id = null ) {
-echo "a";
-	/*	$this->Userinfo->recursive = 1;
-		$yythis->Userinfo->id = $id;
-               $info = $this->Userinfo->find( 'first' , 'conditions' => array( "id " => $id ) );
-var_dump( $info );
-exit;
-		$this->set('userinfos', $this->paginate());
-	}
-
 /**
  * view method
  *

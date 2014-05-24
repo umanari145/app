@@ -1,6 +1,5 @@
 $(function(){
 
-        var URL = "http://dev.cutedogphotosite.net/";
         //セレクトタグに反応して
 /*        //ソートをかける
         $("select").change(function() {
@@ -11,79 +10,26 @@ $(function(){
 */
         //↑はソート条件を変えただけで作動するようにする仕様
 
-
-
-        //評価をしたときの動き
-        $("#valuation").click(function(){
-
-            //変数設定
-            var login_id =$('#welcome').html();
-            var item_id = $('.Itemid').html();
-            var voteValue;
-
-            //ゲストの場合はログイン画面へ。
-            if(login_id == "ゲスト") location.href= URL + "cake/users/";
-
-            //loadinはshowとhideをある程度離さないと
-            //機能しない。多分、一瞬でおわっていまう。
-            adjustLoading(10,"#loading","");
-            $('#loading').show();
-
-            for(var i = 1 ;i <= 5 ; i++ ) {
-
-            voteValue = document.getElementById("VoteVotePoint"+i); 
-
-            if(voteValue.checked == true ) {
-
-
-                var vote_point = voteValue.value;
-                var vote={"login_id":login_id,"item_id":item_id,"vote_point":vote_point};
-
-
-                $.post( URL + 'cake/votes/add/',
-                        {vote:vote},
-                        //既存の表示を隠して、読み込み後のページを表示させる
-                        //(正規表現でグラフの部分のみ抜き取る)
-                        //↑これをやろうとおもったがなぜか正規表現は使えない・・・
-                        function(data){
-                        data.match(/<div id="core2">\s*(.*?)<\/div>/g);
-                        //alert(data);
-                        //alert(RegExp.lastMatch);//←これはタグ部分も含めた場所を抜き取る
-                        //alert(RegExp.lastParen);//←これはヒットした部分、()のみ抜き取る
-                        $('#loading').hide();
-                        adjustLoading(25,"#complete_message","商品に投票しました");
-                        $('#complete_message').fadeIn(2000);
-                        $('#complete_message').fadeOut(5000);
-                        }
-                      );
-                break;//ループからぬける
-            }
-            }
-            return false;
-        });
-
         //コメント追加 ajaxを使った処理
         $("#CommentAdd").click(function(){
 
                 //変数の設定ここの変数名はcommentのテーブル名と一緒にしないとだめ
                 //たとえばuser_idをlogin_numberなどとすると登録されない
-                var poster  = $('#welcome').html();
-                var item_id = $('.Itemid').html();
+                var poster  = $('#commentUsername').val();
+                var item_id = $('#commentItemId').val();
                 var body    = $('#commentBody').val();
-                var user_id = $('#login_number').html();
-                var comment = {"user_id":user_id,"item_id":item_id,"body":body};
-
-                //ゲストの場合ログイン画面へ飛ばす
-                if(poster == "ゲスト") location.href= URL + "cake/users/index";
+                var user_id = $('#commentUserId').val();
+                var comment = { "user_id":user_id, "item_id":item_id, "body":body };
 
                 //空白だと動かない
-                if($.trim(body) !=="" ){
-                //位置調節→loading画像の読み込み
-                adjustLoading(150,"#loading","");
-                $('#loading').show();
+                if($.trim(body) !== "" )
+                {
+                     //位置調節→loading画像の読み込み
+                     adjustLoading(150,"#loading","");
+                     $('#loading').show();
 
                      $.ajax({
-                         url : URL + 'cake/comments/add/'+item_id ,
+                         url : URL + COMMENT_CONTROLLER + 'add/' +item_id ,
                          data : { comment:comment},
                          //functionの戻り値はいらないので()にしておく。なんらかのデータがあれば(data)としておく。投票データなどを参考に。
                          type : "POST",
@@ -100,31 +46,14 @@ $(function(){
                          }
                          });
                 }
+                else
+                {
+                    alert("コメントが入力されていません。");
+                }
+                
                 //データは送らない
                 return false;
         });
-
-        //タグ入力支援
-        $(".tag").mouseover(function(){
-                $(this).css("opacity","0.4");
-                });
-
-        $(".tag").mouseout(function(){
-                $(this).css("background","#00ffff");
-                $(this).css("opacity","1.0");
-                });
-
-        //クリックしたらタグフィールドに
-        $(".tag").click(function(){
-                var tag=$(this).text();
-                var tagArr=$("#ItemTags").val();
-                //区切り文字
-                var separator;
-                separator = ( $.trim( tagArr ) == "" ) ? " " : "," ; 
-                tagArr += separator + tag;
-                $("#ItemTags").val(tagArr);
-
-                });
 
         //モーダルウィンドウ
         //items/viewのみこの動作はする
