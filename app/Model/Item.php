@@ -63,23 +63,30 @@ class Item extends AppModel {
     //画像ファイルチェック関数
     public function imageCheck($data,$key){
 
-        $image=array();
-        $image=$data[$key];
+        $image = array();
+        $image = $data[$key];
 
         //もし一枚目でファイルがない場合はエラー
-        if($key==="image" && $image["name"] === "" ) return false; 
+        if($key === "image" && $image["name"] === "" ) return false; 
 
-        if($image["name"] !== ""){
+        if($image["name"] !== "")
+        {
 
-            if($image['error'] === 0 && $image['size'] !== 0 && preg_match ( '/^image.*/', $image['type'] ) === 1){     
+            if($image['error'] === 0 && $image['size'] !== 0 && preg_match ( '/^image.*/', $image['type'] ) === 1)
+            {     
 
-                if(is_uploaded_file($image['tmp_name']) && $image['size'] < 1000000){
+                if( is_uploaded_file($image['tmp_name']) && $image['size'] < 1000000)
+                {
 
                     $ext = array();
                     $ext = explode( '/', $image['type']);
-                    if ( $ext[1] !== 'jpg' && $ext[1] !== 'gif' && $ext[1] !== 'jpeg' && $ext[1] !== 'png' ) {
+
+                    $ext_array= array('jpg','gif','jpeg','png');
+                    if ( in_array( $ext, $image_ext_array) !== true ) 
+                    {
                         return false;
                     }
+                    
                     //アップされた画像がすべての条件をクリアしていたらここに来る
                     return true;
                 }
@@ -93,8 +100,8 @@ class Item extends AppModel {
 
     //画像ファイルはアップする前に名前を変え、
     //サムネイルを作る
-    public function beforeSave(){
-
+    public function beforeSave()
+    {
         //ここでこの条件がないとカウンター増加
         //など別のItemテーブルへのアクセスの時にも
         //反応してしまう。
@@ -144,47 +151,48 @@ class Item extends AppModel {
     //階層を2段以上掘るときの処理に注意！
     public function itemData($id){
 
-        $item = $this->find('all',
+        $item = $this->find('first',
             array(
                 'contain' => array(
                     'Comment'=> array( 'fields' => array('body'), 'User' => array('fields' => array( 'id' ,'username'))),
                     'User'   => array( 'fields' => array( 'id' ,'username' )),
-                    'Cate.cate'),
-                'conditions' => array( 'Item.id' => $id ) )
+                    'Cate'   => array( 'fields' => array('cate'))),
+                'conditions' => array( 'Item.id' => $id ))
 
             );
-
         return $item[0];
 
     }
 
     public function getSearchQuery()
     {
-        //検索窓に文字があった場合
-        if( isset( $this->request->query['word'] ) === true && trim( $this->request->query['word'] ) !== "" )
-        {    
-            
-            $word = $this->request->query['word'];
-            $this->paginate['conditions'] = array( 'or' => array(
-                                                                  array('Item.body Like' => "%" . $word . "%" ),
-                                                                  array('Item.name Like' => "%" . $word. "%" )
-                                                                )
-                                                  );
-            $this->set( 'word' , $word );
-        }
+
+         $conditions = array();
 
         //カテゴリ検索あった場合はここで絞り込み
         //ただしインデックスは０表記
-        if( $key !== null && $key !== "0" ) $this->paginate['conditions'] = array( 
-                                                                                   'Item.delete_flg' => 0 , 
-                                                                                   'Item.cate_id'    => $key
-                                                                                  );
+        if( $key !== null && $key !== "0" )
+        {
+            $conditions = array( 'Item.delete_flg' => 0 , 'Item.cate_id' => $key);
+        }
+
+        //検索窓に文字があった場合
+        if( isset( $this->request->query['word'] ) === true && trim( $this->request->query['word'] ) !== "" )
+        {    
+            $word = $this->request->query['word'];
+            $conditions  = array( 'or' => array(
+                                            array('Item.body Like' => "%" . $word . "%" ),
+                                            array('Item.name Like' => "%" . $word. "%" )
+                                               )
+                                  );
+        }
     
     }
 
     //左サイドの
     //カテゴリリスト
-    public function cateList(){
+    public function cateList()
+    {
 
         $this->recursive=2;
         //取り出したい情報はitemごとのカテゴリーの数と名称
@@ -193,6 +201,7 @@ class Item extends AppModel {
         return $list;
 
     }
+    
     //The Associations below have been created with all possible keys, those that are not needed can be removed
 
     /**

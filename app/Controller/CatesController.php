@@ -7,7 +7,7 @@ App::uses('AppController', 'Controller');
  */
 class CatesController extends AppController {
 
-
+    public $layout    = 'review';
 /**
  * index method
  *
@@ -41,7 +41,7 @@ class CatesController extends AppController {
         if ($this->request->is('post')) {
             $this->Cate->create();
             if ($this->Cate->save($this->request->data)) {
-                $this->Session->setFlash(__('The cate has been saved'));
+                $this->Session->setFlash(__('カテゴリーが無事登録できました。'));
                 $this->redirect(array('action' => 'index'));
             } else {
                 $this->Session->setFlash(__('The cate could not be saved. Please, try again.'));

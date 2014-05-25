@@ -6,7 +6,6 @@
     
     <div id="item_info">
         <div id="view_image">
-            
             <p>商品名：<?php echo  h($item['Item']['name']); ?>:<?php echo h($item['Item']['created']); ?>登録</p>
             <p>クリックすると拡大されます</p>
             <?php 
@@ -36,6 +35,7 @@
 
          <p><?php echo h($item['Item']['body']); ?></p>
          <p>カテゴリ：<?php echo h($item['Cate']['cate']); ?></p>
+         <input type="button" value="削除する" onClick="deleteItem(<?php echo $item['Item']['id']; ?>); return false;">
     </div>   
     <!--item_info end -->
    

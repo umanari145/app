@@ -15516,3 +15516,352 @@ Stack Trace:
 #1 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
 #2 C:\xampp\htdocs\cake\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2014-05-25 13:45:39 Error: [NotFoundException] データが存在しません。
+Request URL: /cake/items/view/17111111
+Stack Trace:
+#0 [internal function]: ItemsController->view('17111111')
+#1 C:\xampp\htdocs\cake\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ItemsController), Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(ItemsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\cake\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-05-25 15:01:34 Error: [MissingActionException] Action AppController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'img',
+)
+Request URL: /cake/app/img/pic/thumb/_1400289923_001.jpeg
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 C:\xampp\htdocs\cake\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-25 15:01:34 Error: [MissingActionException] Action AppController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'img',
+)
+Request URL: /cake/app/img/pic/thumb/_1400289801_001.jpeg
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 C:\xampp\htdocs\cake\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-25 15:01:34 Error: [MissingActionException] Action AppController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'img',
+)
+Request URL: /cake/app/img/pic/thumb/_1400289699_001.jpeg
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 C:\xampp\htdocs\cake\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-25 15:01:35 Error: [MissingActionException] Action AppController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'img',
+)
+Request URL: /cake/app/img/pic/thumb/_1400289652_001.jpeg
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 C:\xampp\htdocs\cake\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-25 15:15:23 Error: [MissingActionException] Action AppController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'img',
+)
+Request URL: /cake/app/img/pic/thumb/_1400289923_001.jpeg
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 C:\xampp\htdocs\cake\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-25 15:15:24 Error: [MissingActionException] Action AppController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'img',
+)
+Request URL: /cake/app/img/pic/thumb/_1400289801_001.jpeg
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 C:\xampp\htdocs\cake\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-25 15:15:24 Error: [MissingActionException] Action AppController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'img',
+)
+Request URL: /cake/app/img/pic/thumb/_1400289652_001.jpeg
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 C:\xampp\htdocs\cake\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-25 15:15:24 Error: [MissingActionException] Action AppController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'img',
+)
+Request URL: /cake/app/img/pic/thumb/_1400289699_001.jpeg
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 C:\xampp\htdocs\cake\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-25 16:10:23 Error: [MissingViewException] View file "C:\xampp\htdocs\cake\app\View\Cates\add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\cake\\app\\View\\Cates\\add.ctp',
+)
+Request URL: /cake/cates/add
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\cake\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(CatesController), Object(CakeRequest))
+#4 C:\xampp\htdocs\cake\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-05-25 16:20:31 Error: Fatal Error (1): Unsupported operand types in [C:\xampp\htdocs\cake\lib\Cake\View\Helper\FormHelper.php, line 1802]
+2014-05-25 16:20:31 Error: [FatalErrorException] Unsupported operand types
+Request URL: /cake/cates/index
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Unsupported ope...', 'C:\xampp\htdocs...', 1802)
+#1 [internal function]: ErrorHandler::handleError(1, 'Unsupported ope...', 'C:\xampp\htdocs...', 1802, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Unsupported ope...', 'C:\xampp\htdocs...', 1802, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-25 16:22:55 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\xampp\htdocs\cake\app\View\Cates\index.ctp, line 17]
+2014-05-25 16:22:55 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /cake/cates/index
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 17)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 17, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 17, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-25 16:23:10 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\xampp\htdocs\cake\app\View\Cates\index.ctp, line 17]
+2014-05-25 16:23:10 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /cake/cates/index
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 17)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 17, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 17, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-25 17:07:48 Error: [MissingActionException] Action ItemsController::detele() could not be found.
+Exception Attributes: array (
+  'controller' => 'ItemsController',
+  'action' => 'detele',
+)
+Request URL: /cake/items/detele/17
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(ItemsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\cake\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-25 17:09:26 Error: [MissingActionException] Action ItemsController::detele() could not be found.
+Exception Attributes: array (
+  'controller' => 'ItemsController',
+  'action' => 'detele',
+)
+Request URL: /cake/items/detele/17
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(ItemsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\cake\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-25 17:09:35 Error: [MethodNotAllowedException] Method Not Allowed
+Request URL: /cake/items/delete/17
+Stack Trace:
+#0 [internal function]: ItemsController->delete('17')
+#1 C:\xampp\htdocs\cake\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ItemsController), Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(ItemsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\cake\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-05-25 17:10:07 Error: [MethodNotAllowedException] Method Not Allowed
+Request URL: /cake/items/delete/17
+Stack Trace:
+#0 [internal function]: ItemsController->delete('17')
+#1 C:\xampp\htdocs\cake\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ItemsController), Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(ItemsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\cake\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-05-25 17:11:03 Error: [MethodNotAllowedException] Method Not Allowed
+Request URL: /cake/items/delete/17
+Stack Trace:
+#0 [internal function]: ItemsController->delete('17')
+#1 C:\xampp\htdocs\cake\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ItemsController), Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(ItemsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\cake\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-05-25 17:57:58 Error: [MissingActionException] Action AppController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'img',
+)
+Request URL: /cake/app/img/pic/thumb/_1400289699_001.jpeg
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 C:\xampp\htdocs\cake\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-25 17:57:58 Error: [MissingActionException] Action AppController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'img',
+)
+Request URL: /cake/app/img/pic/thumb/_1400289801_001.jpeg
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 C:\xampp\htdocs\cake\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-25 17:57:58 Error: [MissingActionException] Action AppController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'img',
+)
+Request URL: /cake/app/img/pic/thumb/_1400289652_001.jpeg
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 C:\xampp\htdocs\cake\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-25 17:58:14 Error: [MissingActionException] Action AppController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'img',
+)
+Request URL: /cake/app/img/pic/thumb/_1400289801_001.jpeg
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 C:\xampp\htdocs\cake\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-25 17:58:21 Error: [MissingActionException] Action AppController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'img',
+)
+Request URL: /cake/app/img/pic/thumb/_1400289699_001.jpeg
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 C:\xampp\htdocs\cake\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-25 17:58:22 Error: [MissingActionException] Action AppController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'img',
+)
+Request URL: /cake/app/img/pic/thumb/_1400289652_001.jpeg
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 C:\xampp\htdocs\cake\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-25 17:58:30 Error: [MissingActionException] Action AppController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'img',
+)
+Request URL: /cake/app/img/pic/thumb/_1400289699_001.jpeg
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 C:\xampp\htdocs\cake\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-25 17:58:38 Error: [MissingActionException] Action AppController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'img',
+)
+Request URL: /cake/app/img/pic/thumb/_1400289652_001.jpeg
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 C:\xampp\htdocs\cake\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-25 17:58:47 Error: [MissingActionException] Action AppController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'img',
+)
+Request URL: /cake/app/img/pic/thumb/_1400289652_001.jpeg
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 C:\xampp\htdocs\cake\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-25 17:58:55 Error: [MissingActionException] Action AppController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'img',
+)
+Request URL: /cake/app/img/pic/thumb/_1400289923_001.jpeg
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 C:\xampp\htdocs\cake\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-25 17:58:59 Error: [MissingActionException] Action AppController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'img',
+)
+Request URL: /cake/app/img/pic/thumb/_1400289923_001.jpeg
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 C:\xampp\htdocs\cake\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-25 18:18:49 Error: [MissingActionException] Action AppController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'img',
+)
+Request URL: /cake/app/img/pic/_1400289699_001.jpeg
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 C:\xampp\htdocs\cake\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-25 18:18:49 Error: [MissingActionException] Action AppController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'img',
+)
+Request URL: /cake/app/img/pic/_1400289652_001.jpeg
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 C:\xampp\htdocs\cake\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-25 18:20:13 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Item.delete' in 'where clause'
+Request URL: /cake/items/useritem/1/sort:Item.id/direction:desc
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\cake\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `Item`.`...', Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `Item`.`...', Array, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Item`.`...', false)
+#4 C:\xampp\htdocs\cake\lib\Cake\Model\Model.php(2905): DboSource->read(Object(Item), Array)
+#5 C:\xampp\htdocs\cake\lib\Cake\Model\Model.php(2877): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\cake\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#7 C:\xampp\htdocs\cake\lib\Cake\Controller\Controller.php(1080): PaginatorComponent->paginate(NULL, Array, Array)
+#8 C:\xampp\htdocs\cake\app\Controller\ItemsController.php(39): Controller->paginate()
+#9 [internal function]: ItemsController->useritem('1')
+#10 C:\xampp\htdocs\cake\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ItemsController), Array)
+#11 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(ItemsController), Object(CakeRequest))
+#13 C:\xampp\htdocs\cake\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}

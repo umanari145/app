@@ -83,7 +83,7 @@ class UserinfosController extends AppController {
 		}
 		$users = $this->Userinfo->User->find('list');
 		$this->set(compact('users'));
-                $this->render('add');
+        $this->render('add');
 	}
 
 /**

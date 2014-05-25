@@ -34,18 +34,15 @@ class ItemsController extends AppController {
     public function useritem( $id = null ){
         //登録アイテム情報
         $this->paginate['contain']    = array( 'Cate.cate' , 'User.id' , 'Comment' );
-        $this->paginate['conditions'] = array( 'User.id' => $id );
+        $this->paginate['conditions'] = array( 'User.id' => $id ,'Item.delete_flg'=> 0);
         $this->set( 'userinfo' , $userinfo = $this->User->userinfo( $id ));
         $this->set( 'items' , $this->paginate() );
     }
 
-    public function index( $key = null ) {
+    public function index( ) {
         //リレーションはほしい情報だけ取り出す
         $this->paginate['contain'] = array( 'Cate.cate' );
-        $cates  = $this->Item->Cate->find( 'list' );
-        
-        $this->set( 'items' ,   $this->paginate() );
-        $this->set( compact('cates' ) );
+        $this->set( 'items' ,   $this->paginate());
     }
 
     /**
@@ -60,6 +57,7 @@ class ItemsController extends AppController {
         if ( !$this->Item->exists() ) {
             throw new NotFoundException(__('データが存在しません。'));
         }
+
         $this->set( 'item' , $this->Item->itemData( $id ));
     }
 
@@ -71,7 +69,6 @@ class ItemsController extends AppController {
     public function add() {
 
         if ($this->request->is('post')) {
-            
             $this->Item->create();
             if ( $this->Item->save( $this->request->data ) ) {
                 $this->Session->setFlash(__('データの保存ができました'));
@@ -102,11 +99,8 @@ class ItemsController extends AppController {
 
         $this->request->data = $this->Item->read(null, $id);
         
-        if( $this->Auth->user('id') !== $this->request->data['Item']['user_id'] )
-        {
-            throw new NotFoundException(__('このデータを編集する権限がありません。'));
-        }
-
+        //処理権限があるかどうかのチェック
+        $this->Common->checkPermission();
 
         if ($this->request->is('post') || $this->request->is('put')) {
             if ($this->Item->save($this->request->data)) {
@@ -131,18 +125,20 @@ class ItemsController extends AppController {
      * @return void
      */
     public function delete($id = null) {
-        if (!$this->request->is('post')) {
-            throw new MethodNotAllowedException();
-        }
         $this->Item->id = $id;
+        
         if (!$this->Item->exists()) {
             throw new NotFoundException(__('データが存在しません。'));
         }else{
+         
+        //処理権限があるかどうかのチェック
+        $this->Common->checkPermission();
 
             $this->Item->saveField('delete_flg','1');
             $this->Session->setFlash(__('データを削除しました。'));
             $this->redirect(array('action' => 'index'));
         }
+        
         $this->Session->setFlash(__('データの削除に失敗しました。'));
         $this->redirect(array('action' => 'index'));
     }

@@ -40,4 +40,14 @@ class CommonComponent extends Component {
         return $regist_mail_flg ;
 
     }
+
+
+    public function checkPermission()
+    {
+        if( $this->Auth->user('id') !== $this->request->data[$this->alias]['user_id'] )
+        {
+            throw new NotFoundException(__('このデータを編集する権限がありません。'));
+        }
+    }
+
 }

@@ -91,6 +91,7 @@ $(function(){
                     $(this).fadeOut(3000);
                     });
         }
+
 });
 
 //無事読み込めたときの処理ちゃんと位置調整をする　
@@ -105,5 +106,17 @@ function adjustImage(){
 function adjustLoading( fix , selector , message ){
     $(selector).css("top",$(window).scrollTop() + fix );
     //messageあるときはメッセージ入れる
-    if( message != "" ) $(selector).text( message );
+    if( message !== "" ) $(selector).text( message );
 }
+
+function deleteItem( item_id )
+{
+    if( !confirm('この商品を削除しますか？'))
+    {
+        return;
+    }
+    
+    location.href= URL + ITEM_CONTROLLER +'delete/' + item_id;
+
+}
+
